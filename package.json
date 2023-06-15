@@ -1,0 +1,32 @@
+{
+  "name": "vite-firefox-web-extension-template",
+  "version": "1.0.1",
+  "displayName": "Vite Firefox Web Extension Template",
+  "author": "@contentcrow/vite-firefox-web-extension-template",
+  "description": "A @contentcrow/vite-firefox-web-extension-template",
+  "scripts": {
+    "build": "vite build",
+    "watch": "vite build --watch --mode development --minify false",
+    "dev": "vite",
+    "serve:firefox": "web-ext run --firefox-profile=dev --keep-profile-changes --firefox=\"C:\\Program Files\\Firefox Developer Edition\\firefox.exe\" --start-url \"about:debugging#/runtime/this-firefox\"  --source-dir ./dist/",
+    "serve:chrome": "web-ext run -t chromium --start-url \"https://example.com\" --source-dir ./dist/"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "@samrum/vite-plugin-web-extension": "^5.0.0",
+    "@types/chrome": "^0.0.228",
+    "@types/webextension-polyfill": "^0.10.0",
+    "@vitejs/plugin-vue": "^4.2.1",
+    "autoprefixer": "^10.4.14",
+    "postcss": "^8.4.24",
+    "tailwindcss": "^3.3.2",
+    "vite": "~4.3.3",
+    "web-ext": "^0.0.1"
+  },
+  "dependencies": {
+    "@jamescoyle/vue-icon": "^0.1.2",
+    "@mdi/js": "^7.2.96",
+    "vue": "^3.2.47",
+    "webextension-polyfill": "^0.10.0"
+  }
+}
